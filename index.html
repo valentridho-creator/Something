@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>IKA Polinema – Alumni Network</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -28,6 +28,11 @@
 }
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
 /* ── NAVBAR ── */
 nav{
   background:var(--blue-dark);
@@ -329,43 +334,8 @@ footer{background:#111827;padding:44px 48px 24px;margin-top:0}
   .news-grid,.visi-misi,.testimoni-grid,.kontak-layout,.lowongan-layout{grid-template-columns:1fr}
   .branch-grid{grid-template-columns:repeat(2,1fr)}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
-  /* Kode pengganti untuk mengatasi navbar numpuk dan gambar meluber */
-    nav .container {
-      flex-direction: column !important;
-      gap: 12px !important;
-      padding: 10px 16px !important;
-      align-items: center !important;
-    }
-    .nav-links {
-      display: flex !important;
-      flex-direction: row !important;
-      flex-wrap: wrap !important;
-      justify-content: center !important;
-      gap: 8px 16px !important;
-    }
-    .nav-links a {
-      font-size: 14px !important;
-    }
-    .news-grid, 
-    .gallery-grid, 
-    .alumni-grid,
-    .footer-grid {
-      grid-template-columns: 1fr !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-    .news-card, .featured-news, .section, .container {
-      overflow: hidden !important;
-    }
-    .news-card img, 
-    .featured-news img, 
-    .news-grid img {
-      max-width: 100% !important;
-      width: 100% !important;
-      height: auto !important;
-      object-fit: contain !important;
-    }
-
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .featured-news{grid-template-columns:1fr}
 }
 </style>
 </head>
